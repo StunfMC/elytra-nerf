@@ -16,7 +16,7 @@ public abstract class LivingEntityMixin extends Entity {
 		super(type, world);
 	}
 
-	@ModifyExpressionValue(method = "tickFallFlying", at = @At(value = "CONSTANT", args = "intValue=2"))
+	@ModifyExpressionValue(method = "tickGliding", at = @At(value = "CONSTANT", args = "intValue=2"))
 	private int injected(int original) {
 		int ticks = 0;
 		if (ticks == 0){
@@ -25,7 +25,7 @@ public abstract class LivingEntityMixin extends Entity {
 		return ticks * 2;
 	}
 
-	@ModifyArg(method = "tickFallFlying", at = @At(value = "INVOKE",
+	@ModifyArg(method = "tickGliding", at = @At(value = "INVOKE",
 			target = "Lnet/minecraft/item/ItemStack;damage(ILnet/minecraft/entity/LivingEntity;Lnet/minecraft/entity/EquipmentSlot;)V"), index = 0)
 	private int dontDamageElytra(int damage) {
 		int ticks = 0;

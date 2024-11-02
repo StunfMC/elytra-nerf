@@ -4,7 +4,6 @@ import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.FireworkRocketEntity;
-import net.minecraft.item.ElytraItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.world.World;
@@ -24,9 +23,9 @@ public class FireworkRocketEntityMixin {
 	@Inject(method = "<init>(Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/LivingEntity;)V", at = @At("RETURN"))
 	private void elytraFireworkDamage(World world, ItemStack stack, LivingEntity shooter, CallbackInfo ci){
 		if (shooter != null) {
-			if (shooter.isFallFlying()) {
+			if (shooter.isGliding()) {
 				ItemStack itemStack = shooter.getEquippedStack(EquipmentSlot.CHEST);
-				if (itemStack.isOf(Items.ELYTRA) && ElytraItem.isUsable(itemStack)){
+				if (itemStack.isOf(Items.ELYTRA)){
 					itemStack.damage(3, shooter, EquipmentSlot.CHEST);
 				}
 			}

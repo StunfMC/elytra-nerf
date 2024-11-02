@@ -3,12 +3,11 @@
 	"id": "elytra-nerf",
 	"version": "${version}",
 	"name": "Elytra Nerf",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A simple mod that ports the Elytra changes from 1.18 experimental snapshot 7",
 	"authors": [
 		"Stunf"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/StunfMC/elytra-nerf"
 	},
 	"license": "CC0-1.0",
@@ -24,11 +23,8 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.16.5",
-		"minecraft": "~1.21.1",
+		"minecraft": ">=1.21.2",
 		"java": ">=21",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
