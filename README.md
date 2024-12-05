@@ -8,7 +8,7 @@ Fabric mod that ports the Elytra changes from 1.18 experimental snapshot 7.
 
 Elytra Nerf is required on the server only. Using this mod on a server that doesn't have it installed server-side will simply revert to vanilla behavior.
 
-This project requires [Fabric API](https://modrinth.com/mod/fabric-api) to be installed. We do not have plans to create a Forge or NeoForge port at this time.
+This project requires [Fabric API](https://modrinth.com/mod/fabric-api) to be installed. I do not have plans to create a Forge or NeoForge port.
 
 ### Found a bug or have a suggestion?
 
