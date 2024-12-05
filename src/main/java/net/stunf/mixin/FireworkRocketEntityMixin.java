@@ -26,7 +26,7 @@ public class FireworkRocketEntityMixin {
 			if (shooter.isGliding()) {
 				ItemStack itemStack = shooter.getEquippedStack(EquipmentSlot.CHEST);
 				if (itemStack.isOf(Items.ELYTRA)){
-					itemStack.damage(3, shooter, EquipmentSlot.CHEST);
+					itemStack.damage(10, shooter, EquipmentSlot.CHEST);
 				}
 			}
 		}
